@@ -2724,3 +2724,30 @@ header .button.primary.resume svg { width: 20px; height: 20px; }
   .hero-focus-card li { gap: 6px; font-size: 10px; }
   .hero-focus-card li span { flex-basis: 31px; width: 31px; height: 31px; font-size: 17px; }
 }
+
+/* Keep the portrait and copy separate on medium desktop screens */
+@media (max-width: 1360px) and (min-width: 761px) {
+  .hero-content.container {
+    width: calc(100% - 64px);
+    margin: 0 auto;
+  }
+  .hero-copy { width: 52%; }
+  .hero .hero-copy h1 { font-size: clamp(46px, 6.1vw, 82px); }
+  .hero .hero-copy h2 { font-size: clamp(18px, 1.8vw, 23px); }
+  .hero .hero-copy .intro { max-width: 620px; font-size: 15px; }
+  .hero-skills { gap: 9px; max-width: 700px; margin-top: 20px; font-size: 12px; }
+  .hero-skills li { min-height: 46px; padding: 6px 9px; }
+  .hero-skill-icon { min-width: 27px; margin-right: 7px; font-size: 16px; }
+  .hero-visual { width: 43%; }
+  .hero-portrait { right: 14%; height: min(78%, 48vw); }
+  .hero-frame { right: 7%; width: 68%; }
+  .hero-code-card { top: 34%; left: 0; width: min(360px, 74%); padding: 10px 14px; }
+  .hero-code-card pre { font-size: clamp(10px, 1.1vw, 13px); }
+  .hero-focus-card { top: 22%; right: 0; width: min(218px, 64%); padding: 10px; }
+  .hero-focus-card ul { gap: 6px; }
+  .hero-focus-card li { gap: 9px; min-height: 45px; font-size: 12px; }
+  .hero-focus-card li span { flex-basis: 38px; width: 38px; height: 38px; font-size: 20px; }
+}
+@media (max-width: 1060px) and (min-width: 761px) {
+  .hero-focus-card { display: none; }
+}
