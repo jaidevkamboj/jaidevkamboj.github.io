@@ -638,6 +638,7 @@ header .button {
   background: none;
   padding: 0;
   margin-top: 4px;
+  text-decoration: none;
 }
 
 /* ---------- Blog ---------- */

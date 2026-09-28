@@ -10,4 +10,4 @@ Create a public repository named `jaidevkamboj.github.io`, push the site to the 
 
 The site includes a canonical URL, descriptive title and description, Open Graph and Twitter preview metadata, Person structured data, `robots.txt`, and `sitemap.xml`. Submit the sitemap to Google Search Console after the site is live.
 
-The résumé, email, social profiles, credential verification links, and full blog articles still need their final real destinations or content before they can be fully useful. All artwork and certificate assets are stored in `images/` and referenced locally.
+The supplied résumé is available from the Download Resume links. The contact email, GitHub profile, and LinkedIn profile use the destinations listed in the résumé. Certificate cards link to the verification details supplied with the credentials. Project-specific repository links and full blog articles still need verified destinations or content. All artwork and certificate assets are stored in `images/` and referenced locally.
