@@ -2345,3 +2345,382 @@ header .button.primary.resume svg { width: 20px; height: 20px; }
   .hero-skills li { white-space: nowrap; }
   .hero .actions .button { padding: 9px 11px; }
 }
+
+
+/* Reference-inspired hero composition */
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: clamp(720px, calc(100svh - 76px), 850px);
+  max-width: none;
+  height: auto;
+  background: #020c16;
+}
+.hero-art {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse at 71% 45%, rgba(0, 105, 184, .25), transparent 34%),
+    radial-gradient(ellipse at 54% 89%, rgba(0, 171, 220, .08), transparent 30%),
+    linear-gradient(112deg, #020b14 0%, #031321 52%, #03101d 100%);
+}
+.hero-art::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: .32;
+  background:
+    linear-gradient(135deg, transparent 53%, rgba(0, 183, 255, .17) 53.08%, transparent 53.2%),
+    linear-gradient(315deg, transparent 74%, rgba(0, 183, 255, .12) 74.08%, transparent 74.2%),
+    radial-gradient(circle at 69% 21%, rgba(20, 102, 164, .18), transparent 23%);
+}
+.hero-content.container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  width: min(1580px, calc(100% - clamp(52px, 10.6vw, 184px)));
+  max-width: 1580px;
+  min-height: inherit;
+  margin: 0 auto;
+  padding: 48px 0 42px;
+}
+.hero-copy {
+  position: relative;
+  z-index: 3;
+  width: 57%;
+  max-width: 900px;
+}
+.hero .hero-copy .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  width: max-content;
+  max-width: 100%;
+  margin: 0 0 25px;
+  padding: 8px 17px;
+  border: 1px solid rgba(0, 187, 241, .25);
+  border-radius: 999px;
+  background: rgba(0, 118, 166, .18);
+  color: #dcf4ff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .09em;
+}
+.open-dot {
+  width: 11px;
+  height: 11px;
+  flex: 0 0 11px;
+  border-radius: 50%;
+  background: #05e69b;
+  box-shadow: 0 0 12px rgba(5, 230, 155, .45);
+}
+.hero .hero-copy h1 {
+  max-width: none;
+  margin: 0 0 17px;
+  font-size: clamp(66px, 6.05vw, 106px);
+  line-height: .98;
+  letter-spacing: -.055em;
+}
+.hero .hero-copy h1 em {
+  color: #0fcce8;
+  font-style: normal;
+}
+.hero .hero-copy h2 {
+  max-width: 800px;
+  margin: 0 0 17px;
+  font-size: clamp(21px, 1.7vw, 28px);
+  font-weight: 650;
+  line-height: 1.4;
+  white-space: normal;
+}
+.hero .hero-copy h2 .hero-divider {
+  padding: 0 8px;
+  color: #13d5ee;
+}
+.hero .hero-copy .intro {
+  max-width: 730px;
+  margin: 0;
+  color: #aebdcd;
+  font-size: clamp(16px, 1.25vw, 19px);
+  line-height: 1.72;
+}
+.hero .hero-copy .actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  max-width: none;
+  margin: 23px 0 0;
+}
+.hero .hero-copy .actions .button {
+  min-height: 58px;
+  padding: 14px 22px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 700;
+}
+.hero .hero-copy .actions .button svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.hero .hero-copy .actions .button.primary {
+  gap: 12px;
+  color: #00131e;
+}
+.hero .hero-copy .actions .button.resume {
+  gap: 11px;
+  border: 1px solid #2c6683;
+  background: rgba(3, 18, 30, .72);
+  color: #f3f7fb;
+}
+.hero .hero-copy .actions .button.resume:hover {
+  border-color: #16cde8;
+  background: rgba(7, 38, 55, .9);
+}
+.hero-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 14px;
+  max-width: 860px;
+  margin: 26px 0 0;
+  padding: 0;
+  list-style: none;
+  color: #edf5fc;
+  font-size: 14px;
+}
+.hero-skills li {
+  display: inline-flex;
+  align-items: center;
+  min-height: 50px;
+  min-width: 0;
+  padding: 7px 15px;
+  border: 1px solid rgba(58, 126, 160, .7);
+  border-radius: 11px;
+  background: rgba(3, 17, 29, .78);
+  white-space: nowrap;
+}
+.hero-skills li::before { content: none; display: none; }
+.hero-skill-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 33px;
+  height: 29px;
+  margin-right: 11px;
+  border-right: 1px solid rgba(53, 111, 141, .45);
+  color: #08d3ef;
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: -.06em;
+}
+.hero-visual {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 58%;
+  height: 100%;
+  pointer-events: none;
+}
+.hero-frame {
+  position: absolute;
+  top: 9%;
+  right: 13%;
+  width: 54%;
+  height: 74%;
+  border: 1px solid rgba(0, 155, 241, .3);
+  border-radius: 42% 42% 25% 25%;
+  background:
+    radial-gradient(ellipse at 51% 37%, rgba(0, 120, 216, .36), rgba(0, 55, 103, .2) 62%, rgba(0, 17, 35, .08) 100%);
+  box-shadow: inset 0 0 48px rgba(0, 137, 255, .1), 0 0 50px rgba(0, 115, 213, .08);
+}
+.hero-portrait {
+  position: absolute;
+  right: 14%;
+  bottom: -1%;
+  z-index: 3;
+  display: block;
+  width: auto;
+  height: 96%;
+  max-width: none;
+  object-fit: contain;
+  object-position: center bottom;
+  filter: drop-shadow(0 18px 28px rgba(0, 0, 0, .3));
+}
+.hero-code-card {
+  position: absolute;
+  top: 31%;
+  left: 5%;
+  z-index: 2;
+  width: clamp(290px, 28vw, 390px);
+  padding: 12px 18px 18px;
+  transform: rotate(-4deg);
+  border: 1px solid rgba(27, 134, 188, .78);
+  border-radius: 18px;
+  background: rgba(2, 17, 29, .88);
+  box-shadow: 0 22px 48px rgba(0, 0, 0, .28), inset 0 0 28px rgba(0, 89, 147, .13);
+}
+.hero-code-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 26px;
+  margin-bottom: 9px;
+  border-bottom: 1px solid rgba(59, 113, 145, .22);
+}
+.hero-code-top i {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ff586e;
+}
+.hero-code-top i:nth-child(2) { background: #ffbf54; }
+.hero-code-top i:nth-child(3) { background: #16dc92; }
+.hero-code-top span {
+  margin-left: 7px;
+  color: #69899f;
+  font: 11px/1.2 ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+.hero-code-card pre {
+  margin: 0;
+  color: #c8d9e8;
+  font: 15px/1.7 ui-monospace, SFMono-Regular, Consolas, monospace;
+  white-space: pre-wrap;
+}
+.hero-code-card code b { color: #8f8aff; font-weight: 600; }
+.hero-code-card code em { color: #ff9167; font-style: normal; }
+.hero-code-card code span { color: #37d5f2; }
+.hero-code-card code strong { color: #1be0a1; font-weight: 600; }
+.hero-focus-card {
+  position: absolute;
+  top: 22%;
+  right: 3%;
+  z-index: 4;
+  width: clamp(220px, 19vw, 278px);
+  padding: 15px 14px;
+  border: 1px solid rgba(65, 143, 181, .8);
+  border-radius: 18px;
+  background: rgba(2, 16, 29, .94);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, .25), inset 0 0 25px rgba(0, 120, 176, .08);
+  backdrop-filter: blur(10px);
+}
+.hero-focus-card ul {
+  display: grid;
+  gap: 11px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.hero-focus-card li {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-height: 55px;
+  color: #f0f6fc;
+  font-size: 14px;
+  white-space: nowrap;
+}
+.hero-focus-card li span {
+  display: grid;
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border-radius: 13px;
+  background: linear-gradient(145deg, #07536f, #032f47);
+  color: #15d6f2;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+@media (max-width: 1160px) and (min-width: 761px) {
+  .hero-content.container {
+    width: calc(100% - 64px);
+    padding-top: 38px;
+    padding-bottom: 34px;
+  }
+  .hero-copy { width: 59%; }
+  .hero .hero-copy h1 { font-size: clamp(58px, 6.3vw, 76px); }
+  .hero .hero-copy h2 { font-size: clamp(19px, 2vw, 23px); }
+  .hero .hero-copy .intro { font-size: 15px; }
+  .hero-skills { gap: 9px; margin-top: 21px; font-size: 12px; }
+  .hero-skills li { min-height: 44px; padding: 6px 10px; }
+  .hero-skill-icon { min-width: 27px; margin-right: 7px; font-size: 16px; }
+  .hero-visual { width: 49%; }
+  .hero-portrait { height: 83%; right: 11%; }
+  .hero-code-card { top: 34%; left: 0; width: 54%; padding: 10px 13px; }
+  .hero-code-card pre { font-size: 12px; }
+  .hero-focus-card { top: 23%; right: 0; width: 218px; padding: 10px; }
+  .hero-focus-card ul { gap: 6px; }
+  .hero-focus-card li { gap: 9px; min-height: 45px; font-size: 12px; }
+  .hero-focus-card li span { flex-basis: 38px; width: 38px; height: 38px; font-size: 20px; }
+}
+@media (max-width: 760px) {
+  .hero { min-height: 0; }
+  .hero-art {
+    background:
+      radial-gradient(ellipse at 72% 72%, rgba(0, 99, 181, .22), transparent 34%),
+      linear-gradient(180deg, #020b14 0%, #031321 57%, #020d17 100%);
+  }
+  .hero-content.container {
+    display: block;
+    width: calc(100% - 36px);
+    min-height: 0;
+    padding: 32px 0 0;
+  }
+  .hero-copy { width: 100%; max-width: none; }
+  .hero .hero-copy .eyebrow { margin-bottom: 19px; font-size: 11px; }
+  .hero .hero-copy h1 { font-size: clamp(51px, 10.8vw, 72px); margin-bottom: 13px; }
+  .hero .hero-copy h2 { font-size: clamp(19px, 4.5vw, 23px); margin-bottom: 12px; }
+  .hero .hero-copy .intro { font-size: 15px; line-height: 1.62; }
+  .hero .hero-copy .actions { gap: 10px; margin-top: 19px; }
+  .hero .hero-copy .actions .button { min-height: 50px; padding: 11px 15px; font-size: 13px; }
+  .hero-skills { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-top: 20px; font-size: 11px; }
+  .hero-skills li { min-height: 43px; padding: 6px 9px; white-space: normal; }
+  .hero-skill-icon { min-width: 25px; height: 25px; margin-right: 7px; font-size: 15px; }
+  .hero-visual {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 100%;
+    height: clamp(340px, 88vw, 500px);
+    margin-top: 2px;
+    overflow: hidden;
+  }
+  .hero-frame { top: 5%; right: 12%; width: 72%; height: 82%; }
+  .hero-portrait { right: 17%; bottom: -1%; height: 100%; max-height: 500px; }
+  .hero-code-card { top: 34%; left: 0; width: 53%; padding: 9px 11px 12px; border-radius: 14px; }
+  .hero-code-top { height: 21px; margin-bottom: 5px; }
+  .hero-code-top i { width: 8px; height: 8px; }
+  .hero-code-top span { font-size: 9px; }
+  .hero-code-card pre { font-size: clamp(10px, 2.8vw, 13px); }
+  .hero-focus-card { top: 20%; right: 0; width: min(220px, 48%); padding: 9px; border-radius: 14px; }
+  .hero-focus-card ul { gap: 4px; }
+  .hero-focus-card li { gap: 8px; min-height: 42px; font-size: 11px; }
+  .hero-focus-card li span { flex-basis: 36px; width: 36px; height: 36px; border-radius: 10px; font-size: 19px; }
+}
+@media (max-width: 420px) {
+  .hero-content.container { width: calc(100% - 30px); padding-top: 26px; }
+  .hero .hero-copy .eyebrow { padding: 7px 12px; font-size: 10px; }
+  .hero .hero-copy h1 { font-size: clamp(45px, 11.4vw, 54px); }
+  .hero .hero-copy .intro { font-size: 14px; }
+  .hero .hero-copy .actions .button { min-height: 46px; padding: 9px 11px; font-size: 12px; }
+  .hero .hero-copy .actions .button svg { width: 20px; height: 20px; }
+  .hero-skills { gap: 7px; font-size: 10px; }
+  .hero-skills li { min-height: 40px; padding: 5px 7px; }
+  .hero-skill-icon { min-width: 22px; height: 23px; margin-right: 5px; font-size: 13px; }
+  .hero-visual { height: 350px; }
+  .hero-portrait { right: 15%; height: 96%; }
+  .hero-code-card { top: 34%; width: 54%; }
+  .hero-code-card pre { font-size: 10px; }
+  .hero-focus-card { width: 46%; }
+  .hero-focus-card li { gap: 6px; font-size: 10px; }
+  .hero-focus-card li span { flex-basis: 31px; width: 31px; height: 31px; font-size: 17px; }
+}
