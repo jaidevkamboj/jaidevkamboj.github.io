@@ -337,6 +337,20 @@ function setupRevealAnimations() {
   });
 }
 
+function setupFooter() {
+  const year = select('#footer-year');
+  if (year) year.textContent = String(new Date().getFullYear());
+
+  const subscribe = select('#footer-subscribe');
+  subscribe?.addEventListener('submit', event => {
+    event.preventDefault();
+    const email = select('#footer-email').value.trim();
+    const subject = encodeURIComponent('Portfolio project updates');
+    const body = encodeURIComponent(`Please include me in email updates. My email address is ${email}.`);
+    window.location.href = `mailto:jaidevkamboj@gmail.com?subject=${subject}&body=${body}`;
+  });
+}
+
 setupNavigation();
 setupDialogs();
 setupContentToggles();
@@ -344,3 +358,4 @@ setupContactForm();
 setupSearch();
 setupSectionNavigation();
 setupRevealAnimations();
+setupFooter();
