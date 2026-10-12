@@ -16,6 +16,13 @@ function setupNavigation() {
   const nav = select('#navigation');
   const menu = select('.menu-toggle');
 
+  function closeMenu(restoreFocus = false) {
+    nav.classList.remove('open');
+    menu.setAttribute('aria-expanded', 'false');
+    menu.setAttribute('aria-label', 'Open navigation');
+    if (restoreFocus) menu.focus();
+  }
+
   menu.addEventListener('click', () => {
     const isOpen = nav.classList.toggle('open');
     menu.setAttribute('aria-expanded', String(isOpen));
@@ -25,9 +32,19 @@ function setupNavigation() {
   nav.addEventListener('click', event => {
     if (!event.target.closest('a')) return;
 
-    nav.classList.remove('open');
-    menu.setAttribute('aria-expanded', 'false');
-    menu.setAttribute('aria-label', 'Open navigation');
+    closeMenu();
+  });
+
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && nav.classList.contains('open')) {
+      closeMenu(true);
+    }
+  });
+
+  document.addEventListener('click', event => {
+    if (!nav.classList.contains('open')) return;
+    if (nav.contains(event.target) || menu.contains(event.target)) return;
+    closeMenu();
   });
 }
 
