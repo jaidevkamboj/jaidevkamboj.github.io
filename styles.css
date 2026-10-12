@@ -3242,7 +3242,8 @@ header .button.primary.resume svg { width: 16px; height: 16px; }
   background: transparent;
   border-bottom: 1px solid #00bfe5;
 }
-.footer-bottom { border-top: 1px solid rgba(21, 81, 108, .5); background: #00101b; }
+.footer-showcase-art { display: none; }
+.footer-bottom { position: relative; z-index: 1; border-top: 1px solid rgba(21, 81, 108, .5); background: #00101b; }
 .footer-bottom-content {
   min-height: clamp(64px, 4.3vw, 88px);
   display: flex;
@@ -3278,20 +3279,17 @@ header .button.primary.resume svg { width: 16px; height: 16px; }
     min-height: 0;
     aspect-ratio: 1983 / 792;
     background-color: #031c2b;
-    background-image: url("images/footer-background.png");
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-image: none;
   }
+  .footer-showcase-art { position: absolute; inset: 0; display: block; width: 100%; height: 100%; }
+  .footer-showcase-art img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center center; }
   .footer-columns { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 30px; }
   .footer-column:nth-child(4) { border-left: 0; padding-left: 0; }
   .footer-column:last-child { padding-right: clamp(14px, 2vw, 27px); }
 }
-/* Use lossless WebP footer artwork when available; the PNG declarations above are fallback. */
 @supports (background-image: image-set(url("images/footer-background.webp") type("image/webp"))) {
-  .site-footer { background-image: image-set(url("images/footer-background.webp") type("image/webp"), url("images/footer-background.png") type("image/png")); }
-  @media (max-width: 1000px) {
-    .footer-showcase { background-image: image-set(url("images/footer-background.webp") type("image/webp"), url("images/footer-background.png") type("image/png")); }
+  @media (min-width: 1001px) {
+    .site-footer { background-image: image-set(url("images/footer-background.webp") type("image/webp"), url("images/footer-background.png") type("image/png")); }
   }
 }
 

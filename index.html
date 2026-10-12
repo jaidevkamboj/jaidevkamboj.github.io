@@ -26,7 +26,10 @@
 <meta name="twitter:image" content="https://jaidevkamboj.github.io/images/hero-img.webp">
 <meta name="twitter:image:alt" content="Jaidev Kamboj in a technology workspace with code and an audio waveform display">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261012-seo">
+<link rel="preload" as="image" href="images/hero-portrait.webp" type="image/webp" media="(max-width: 760px)" fetchpriority="high">
+<link rel="preload" as="image" href="images/hero-img.webp" type="image/webp" media="(max-width: 760px)" fetchpriority="low">
+<link rel="preload" as="image" href="images/hero-img.webp" type="image/webp" media="(min-width: 761px)" fetchpriority="high">
+<link rel="stylesheet" href="styles.css?v=20261013-lcp">
 <script src="app.js" defer></script>
 <script type="application/ld+json">
 {
@@ -192,7 +195,7 @@
     <picture class="hero-media">
       <source media="(max-width: 760px)" srcset="images/hero-portrait.webp" type="image/webp">
       <source media="(min-width: 761px)" srcset="images/hero-img.webp" type="image/webp">
-      <img class="hero-portrait" src="images/hero-portrait.png" alt="Jaidev Kamboj in a software engineering workspace" width="1145" height="1374" fetchpriority="high" decoding="async">
+      <img class="hero-portrait" src="images/hero-portrait.png" alt="Jaidev Kamboj in a software engineering workspace" width="1145" height="1374" loading="eager" fetchpriority="high" decoding="async">
     </picture>
   </div>
 </section>
@@ -610,6 +613,10 @@
     </div>
   </div>
   <div class="footer-showcase" aria-hidden="true">
+    <picture class="footer-showcase-art">
+      <source srcset="images/footer-background.webp" type="image/webp">
+      <img src="images/footer-background.png" alt="" width="1983" height="793" loading="lazy" decoding="async">
+    </picture>
   </div>
   <div class="footer-bottom">
     <div class="container footer-bottom-content">

@@ -1,16 +1,21 @@
 # SEO audit and follow-up
 
-Audit date: 2026-10-12  
-Site: <https://jaidevkamboj.github.io/>  
+Audit date: 2026-10-13
+Site: <https://jaidevkamboj.github.io/>
 Hosting: GitHub Pages, static single-page portfolio
+
+## Lighthouse calculator values supplied by the user
+
+The screenshot shows a mobile calculator score of 79 with FCP 907 ms, Speed Index 3,655 ms, LCP 5,424 ms, TBT 0 ms, and CLS 0.00. These are calculator inputs, not a fresh Lighthouse or PageSpeed run against the deployed site. They indicate that LCP and visual completion are the clearest opportunities; blocking time and layout shift are already strong.
 
 ## Completed in the local project
 
 - Kept the current single-page design and section URLs. The page has one canonical homepage URL, an index/follow robots directive, a sitemap containing the canonical URL, and semantic section anchors.
 - Confirmed the head includes a descriptive page title and description, canonical URL, Open Graph/X metadata, language, and indexable robots settings.
 - Kept the existing `WebSite`, `ProfilePage`, and `Person` JSON-LD; added the public GitHub and LinkedIn profile URLs as `sameAs` links.
-- Updated the sitemap `<lastmod>` to `2026-10-12` for this content update.
+- Updated the sitemap `<lastmod>` to `2026-10-13` for this content update.
 - Added a lossless WebP source for the mobile hero, retaining the PNG as the browser fallback. Added a lossless WebP footer artwork option while retaining the PNG fallback and the current desktop/mobile layout rules.
+- Preloaded the responsive hero portrait with high fetch priority and marked it eager; preloaded the CSS hero artwork early at low priority on mobile so it does not compete with the portrait. On mobile and tablet, changed the footer banner from an eager CSS background request to the same lossless image in a lazy-loaded decorative `<picture>`, so it does not compete with initial rendering. The desktop footer background retains its original positioning and PNG fallback.
 - Reviewed section heading levels and image alternatives. Meaningful content images have descriptive `alt` text; decorative artwork and icons are hidden from assistive technology.
 - Local image asset sizes: mobile hero PNG 1,157,800 bytes → WebP 753,674 bytes (34.9% smaller); footer banner PNG 2,206,471 bytes → WebP 1,276,622 bytes (42.1% smaller). The source images are unchanged; the WebP encodes are lossless.
 
