@@ -3100,12 +3100,18 @@ header .button.primary.resume svg { width: 16px; height: 16px; }
 }
 .footer-column.footer-quick-links {
   display: block;
+  position: static;
+  inset: auto;
   height: auto;
   flex: initial;
   align-items: initial;
   justify-content: initial;
   gap: 0;
+  padding: 0 clamp(18px, 2vw, 40px);
+  background: transparent;
+  border-bottom: 0;
 }
+.footer-column.footer-quick-links .footer-link-grid a { padding: 0; font-size: inherit; }
 .footer-column:first-child { padding-left: 0; border-left: 0; }
 .footer-column:last-child { padding-right: 0; }
 .footer-brand {
@@ -3304,6 +3310,7 @@ header .button.primary.resume svg { width: 16px; height: 16px; }
     border: 0;
     border-bottom: 1px solid rgba(21, 81, 108, .62);
   }
+  .footer-column.footer-quick-links { padding: 20px 0; border-bottom: 1px solid rgba(21, 81, 108, .62); }
   .footer-column:first-child { padding-top: 0; }
   .footer-column:last-child { padding-bottom: 0; border-bottom: 0; }
   .footer-brand { gap: 10px; margin-bottom: 12px; }
