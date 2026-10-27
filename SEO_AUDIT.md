@@ -6,7 +6,7 @@
 - Corrected `Person.sameAs` to point to the matching public GitHub profile and LinkedIn profile, and added the X profile linked from GitHub. LinkedIn and GitHub Profile identities and the portfolio URL cross-reference were checked publicly.
 - Linked the `Person` entity back to the site's `ProfilePage`; kept the one-page canonical URL and added the visible content update date to the sitemap. The Google verification file is at the site root (commit `fb871f8`); the SEO updates are in commit `2f21075`.
 - No visual layout or CSS changes were made in this SEO update.
-- Still unverified: the live Google URL Inspection result, Search Console property and sitemap status, manual actions/security reports, and PageSpeed field data. These require the site owner's Search Console account. The public search preview still showed the old title from a crawl last week, and this environment could not fetch the verification file or sitemap from GitHub Pages, so deployment and Google recrawl need confirmation after the publish.
+- Still unverified: the live Google URL Inspection result, Search Console property and sitemap status, manual actions/security reports, and PageSpeed field data. These require the site owner's Search Console account. GitHub `main` has the SEO commit, but the public search preview still showed the old title from a crawl last week and this environment could not fetch the verification file or sitemap from GitHub Pages, so live deployment and Google recrawl need confirmation.
 - Content opportunity: the four “Latest Insights” cards are previews, not article pages. Add original, accurate article pages with their own canonical URLs, descriptions, and sitemap entries when the underlying technical details are ready; the current hash sections are not separate indexable pages.
 
 Audit date: 2026-10-27
@@ -21,8 +21,8 @@ The screenshot shows a mobile calculator score of 79 with FCP 907 ms, Speed Inde
 
 - Kept the current single-page design and section URLs. The page has one canonical homepage URL, an index/follow robots directive, a sitemap containing the canonical URL, and semantic section anchors.
 - Confirmed the head includes a descriptive page title and description, canonical URL, Open Graph/X metadata, language, and indexable robots settings.
-- Kept the existing `WebSite`, `ProfilePage`, and `Person` JSON-LD; added the public GitHub and LinkedIn profile URLs as `sameAs` links.
-- Updated the sitemap `<lastmod>` to `2026-10-13` for this content update.
+- Kept the existing `WebSite`, `ProfilePage`, and `Person` JSON-LD; `Person.sameAs` now links to the public GitHub, LinkedIn, and X profiles.
+- Updated the sitemap `<lastmod>` to `2026-10-27` for the title, description, and profile-entity update. The footer Sitemap link points to `/sitemap.xml`.
 - Added a lossless WebP source for the mobile hero, retaining the PNG as the browser fallback. Added a lossless WebP footer artwork option while retaining the PNG fallback and the current desktop/mobile layout rules.
 - Preloaded the responsive hero portrait with high fetch priority and marked it eager; preloaded the CSS hero artwork early at low priority on mobile so it does not compete with the portrait. On mobile and tablet, changed the footer banner from an eager CSS background request to the same lossless image in a lazy-loaded decorative `<picture>`, so it does not compete with initial rendering. The desktop footer background retains its original positioning and PNG fallback.
 - Reviewed section heading levels and image alternatives. Meaningful content images have descriptive `alt` text; decorative artwork and icons are hidden from assistive technology.
@@ -30,11 +30,12 @@ The screenshot shows a mobile calculator score of 79 with FCP 907 ms, Speed Inde
 
 ## Public checks and limits
 
-- The public homepage is reachable from a web search crawl. The crawl snapshot returned content from a prior version (for example, the older Software Engineer / Web Developer hero content), while the local project contains newer R&D and embedded engineering content. The snapshot reports it was crawled last week, so it is not proof of current origin content. Publish the local updates, then use Search Console URL Inspection to request a recrawl.
-- The project files allow all crawlers and reference the sitemap. The web fetch used for this audit could not independently retrieve the deployed `robots.txt` or sitemap, so their live HTTP status/content still needs verification after deployment.
-- Search Console is not connected to the available tools, and no verification token or account access was provided. Property verification, sitemap submission, indexing reports, and search query/performance review remain account actions.
+- Local HTML inspection: one H1; valid JSON syntax in the JSON-LD block; no duplicate IDs or broken hash links; no missing image `alt` attributes; and no missing local image, CSS, JavaScript, resume, or certificate references. This is source validation, not a live rendered-page test.
+- Local `robots.txt` allows crawling and references the root sitemap. The sitemap contains only the canonical homepage, which is correct for the current one-page site. The public crawler snapshot is old and direct fetches of the deployed robots file, sitemap, and Google verification path were unavailable in this audit; live HTTP status and redirect behavior remain unconfirmed.
+- The supplied Google verification file is committed at the site root, but Search Console is not connected to the available tools. Property verification, sitemap submission/processing, indexing status, manual actions, security issues, and exact-name query performance remain account checks.
+- The public search lookup available here surfaced GitHub and LinkedIn profiles for the exact-name query but did not reliably surface the portfolio domain. The public homepage snapshot showed an older title and reports a crawl from last week; this does not establish whether Google currently indexes the new version.
 - No PageSpeed Insights field or lab report was available to measure LCP, INP, or CLS; no numerical Core Web Vitals claim is made. Run PSI on mobile and desktop after the image changes are published. Targets for “good” CWV are LCP ≤ 2.5 s, INP ≤ 200 ms, and CLS ≤ 0.1 at the 75th percentile.
-- The ISRO/IIRS verifier responded publicly. LinkedIn rate-limited the audit fetch; Coursera and GitHub returned cache misses in the web tool. Those results do not indicate broken links, but their destinations were not confirmed. GitHub Pages response headers/redirects and visual rendering at device widths also need live/browser checks after publishing.
+- Public checks of every external destination were not available. Local links and assets resolve in the repository, but external certificate destinations and GitHub Pages response headers/redirects are not confirmed by this source audit.
 
 ## Keyword and content opportunities
 
@@ -63,7 +64,8 @@ Use these phrases in useful project write-ups and dedicated article pages when t
 
 ## Still outstanding
 
-- Publish these local changes to GitHub Pages.
-- Complete Search Console verification and submit the sitemap from the owner account.
-- Obtain a current PSI report and confirm deployed mobile/tablet/desktop rendering and external-link destinations.
+- Confirm the latest GitHub commit is served by GitHub Pages; the search snapshot has not refreshed yet.
+- Complete Search Console verification, submit the sitemap, inspect the homepage's Google-selected canonical, and review Page Indexing, Manual Actions, Security Issues, and query performance from the owner account.
+- Obtain a current PSI report on mobile and desktop, then prioritize measured Core Web Vitals issues.
+- Confirm live HTTP status/redirects and any external certification destinations that matter to visitors.
 - Add full, original project/article landing pages if more search entry points are desired; the current one-page section anchors are not separate indexable documents.
