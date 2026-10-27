@@ -1235,7 +1235,7 @@ dialog p { margin-bottom: 15px; }
     opacity: 1;
     background-image:
       linear-gradient(90deg, #00121e 0%, #00121e 40%, rgba(0,18,30,.97) 50%, rgba(0,18,30,.18) 61%, transparent 72%),
-      url("images/hero-img.webp");
+      url("images/hero-img-optimized.webp");
     background-size: 100% 100%, auto calc(100% + 106px);
     background-position: center, center bottom;
     background-repeat: no-repeat;
@@ -1358,6 +1358,11 @@ dialog p { margin-bottom: 15px; }
 }
 
 @media (max-width: 1200px) and (min-width: 761px) {
+  .hero-art {
+    background-image:
+      linear-gradient(90deg, #00121e 0%, #00121e 40%, rgba(0,18,30,.97) 50%, rgba(0,18,30,.18) 61%, transparent 72%),
+      url("images/hero-bg-1200.webp");
+  }
   .nav-wrap { gap: 12px; }
   .brand { gap: 9px; }
   nav { gap: clamp(8px, 1.15vw, 14px); }
@@ -1388,10 +1393,9 @@ dialog p { margin-bottom: 15px; }
     height: 100%;
     opacity: 1;
     background-image:
-      linear-gradient(180deg, #00121e 2%, rgba(0,18,30,.98) 43%, rgba(0,18,30,.32) 76%, rgba(0,18,30,.18)),
-      url("images/hero-img.webp");
-    background-size: 100% 100%, auto 610px;
-    background-position: center, 67% bottom;
+      linear-gradient(180deg, #00121e 2%, rgba(0,18,30,.98) 43%, rgba(0,18,30,.32) 76%, rgba(0,18,30,.18));
+    background-size: 100% 100%;
+    background-position: center;
     background-repeat: no-repeat;
   }
   .hero-art:after { display: none; }
@@ -3073,7 +3077,7 @@ header .button.primary.resume svg { width: 16px; height: 16px; }
   position: relative;
   border-top: 0;
   background-color: #00121e;
-  background-image: url("images/footer-background.png");
+  background-image: url("images/footer-background-1983.webp");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -3293,9 +3297,9 @@ header .button.primary.resume svg { width: 16px; height: 16px; }
   .footer-column:nth-child(4) { border-left: 0; padding-left: 0; }
   .footer-column:last-child { padding-right: clamp(14px, 2vw, 27px); }
 }
-@supports (background-image: image-set(url("images/footer-background.webp") type("image/webp"))) {
+@supports (background-image: image-set(url("images/footer-background-1983.webp") type("image/webp"))) {
   @media (min-width: 1001px) {
-    .site-footer { background-image: image-set(url("images/footer-background.webp") type("image/webp"), url("images/footer-background.png") type("image/png")); }
+    .site-footer { background-image: image-set(url("images/footer-background-1983.webp") type("image/webp"), url("images/footer-background.png") type("image/png")); }
   }
 }
 

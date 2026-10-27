@@ -26,10 +26,10 @@
 <meta name="twitter:image" content="https://jaidevkamboj.github.io/images/hero-img.webp">
 <meta name="twitter:image:alt" content="Jaidev Kamboj in a technology workspace with code and an audio waveform display">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="preload" as="image" href="images/hero-portrait.webp" type="image/webp" media="(max-width: 760px)" fetchpriority="high">
-<link rel="preload" as="image" href="images/hero-img.webp" type="image/webp" media="(max-width: 760px)" fetchpriority="low">
-<link rel="preload" as="image" href="images/hero-img.webp" type="image/webp" media="(min-width: 761px)" fetchpriority="high">
-<link rel="stylesheet" href="styles.css?v=20261013-footer-mobile">
+<link rel="preload" as="image" href="images/hero-portrait-640.webp" imagesrcset="images/hero-portrait-640.webp 640w, images/hero-portrait-960.webp 960w" imagesizes="(max-width: 760px) 100vw, 0px" type="image/webp" media="(max-width: 760px)" fetchpriority="high">
+<link rel="preload" as="image" href="images/hero-bg-1200.webp" imagesrcset="images/hero-bg-1200.webp 1200w, images/hero-img-optimized.webp 1895w" imagesizes="100vw" type="image/webp" media="(min-width: 761px) and (max-width: 1200px)" fetchpriority="high">
+<link rel="preload" as="image" href="images/hero-img-optimized.webp" type="image/webp" media="(min-width: 1201px)" fetchpriority="high">
+<link rel="stylesheet" href="styles.css?v=20261027-mobile-performance">
 <script src="app.js" defer></script>
 <script type="application/ld+json">
 {
@@ -195,8 +195,8 @@
     </div>
     <div class="hero-note" aria-hidden="true"><span>Turning<br>Ideas into<br>Real-World<br>Solutions</span><svg viewBox="0 0 72 66"><path d="M6 55C29 53 48 37 53 12m0 0-10 8m10-8 8 11"/></svg></div>
     <picture class="hero-media">
-      <source media="(max-width: 760px)" srcset="images/hero-portrait.webp" type="image/webp">
-      <source media="(min-width: 761px)" srcset="images/hero-img.webp" type="image/webp">
+      <source media="(max-width: 760px)" srcset="images/hero-portrait-640.webp 640w, images/hero-portrait-960.webp 960w" sizes="100vw" type="image/webp">
+      <source media="(min-width: 761px)" srcset="images/hero-bg-1200.webp 1200w, images/hero-img-optimized.webp 1895w" sizes="100vw" type="image/webp">
       <img class="hero-portrait" src="images/hero-portrait.png" alt="Jaidev Kamboj in a software engineering workspace" width="1145" height="1374" loading="eager" fetchpriority="high" decoding="async">
     </picture>
   </div>
@@ -214,7 +214,7 @@
 <!-- ============ ABOUT ============ -->
 <section id="about" class="section about" aria-labelledby="about-heading">
   <div class="about-art">
-    <img class="art" src="images/stm32.webp" alt="STM32 microcontroller development board" width="1485" height="1059" loading="lazy" decoding="async">
+    <img class="art" src="images/stm32-640.webp" srcset="images/stm32-640.webp 640w, images/stm32-960.webp 960w, images/stm32.webp 1485w" sizes="(max-width: 760px) 90vw, (max-width: 1200px) 45vw, 38vw" alt="STM32 microcontroller development board" width="1485" height="1059" loading="lazy" decoding="async">
     <span class="about-note" aria-hidden="true">STM32<br>Embedded<br>Platform</span>
   </div>
   <div class="container about-grid">
@@ -278,7 +278,7 @@
     <div class="projects-grid">
 
       <article class="project">
-        <img class="art" src="images/stm32.webp" alt="STM32 Real-Time Embedded Platform" width="1485" height="1059" loading="lazy" decoding="async">
+        <img class="art" src="images/stm32-640.webp" srcset="images/stm32-640.webp 640w, images/stm32-960.webp 960w, images/stm32.webp 1485w" sizes="(max-width: 760px) 90vw, (max-width: 1200px) 45vw, 25vw" alt="STM32 Real-Time Embedded Platform" width="1485" height="1059" loading="lazy" decoding="async">
         <div class="project-body">
           <div class="tags"><span>Embedded</span><span>STM32</span><span>RTOS</span></div>
           <h3>STM32 Real-Time Embedded Platform</h3>
@@ -291,7 +291,7 @@
       </article>
 
       <article class="project">
-        <img class="art" src="images/ESP32-Industrial-IoT.webp" alt="ESP32 Industrial IoT Gateway" width="1280" height="720" loading="lazy" decoding="async">
+        <img class="art" src="images/esp32-gateway-640.webp" srcset="images/esp32-gateway-640.webp 640w, images/esp32-gateway-960.webp 960w, images/ESP32-Industrial-IoT.webp 1280w" sizes="(max-width: 760px) 90vw, (max-width: 1200px) 45vw, 25vw" alt="ESP32 Industrial IoT Gateway" width="1280" height="720" loading="lazy" decoding="async">
         <div class="project-body">
           <div class="tags"><span>IoT</span><span>ESP32</span><span>AI</span></div>
           <h3>ESP32 Industrial IoT Gateway</h3>
@@ -304,7 +304,7 @@
       </article>
 
       <article class="project">
-        <img class="art" src="images/JaidevKambojDJPlayer.webp" alt="Jaidev Kamboj DJ Player interface with dual decks, waveforms, and a mixer" width="1917" height="1016" loading="lazy" decoding="async">
+        <img class="art" src="images/dj-player-800.webp" srcset="images/dj-player-800.webp 800w, images/dj-player-1280.webp 1280w, images/JaidevKambojDJPlayer.webp 1917w" sizes="(max-width: 760px) 90vw, (max-width: 1200px) 45vw, 25vw" alt="Jaidev Kamboj DJ Player interface with dual decks, waveforms, and a mixer" width="1917" height="1016" loading="lazy" decoding="async">
         <div class="project-body">
           <div class="tags"><span>Audio</span><span>JUCE</span><span>C++</span></div>
           <h3>JaidevKambojDJPlayer</h3>
@@ -317,7 +317,7 @@
       </article>
 
       <article class="project">
-        <img class="art" src="images/blog-uav.jpg" alt="UAV flying above a mountainous landscape at dusk" width="1280" height="640" loading="lazy" decoding="async">
+        <img class="art" src="images/blog-uav-320.webp" srcset="images/blog-uav-320.webp 320w, images/blog-uav-640.webp 640w, images/blog-uav-960.webp 960w, images/blog-uav.jpg 1280w" sizes="(max-width: 760px) 90vw, (max-width: 1100px) 46vw, 25vw" alt="UAV flying above a mountainous landscape at dusk" width="1280" height="640" loading="lazy" decoding="async">
         <div class="project-body">
           <div class="tags"><span>Robotics</span><span>AI/ML</span><span>Computer Vision</span></div>
           <h3>UAV Flight Control System</h3>
@@ -335,25 +335,25 @@
 
     <div class="more-grid">
       <button class="mini-project detail" type="button" data-title="Robotics Control System" data-tags="STM32,Robotics" data-description="A robotics control system built around STM32 hardware and real-time control.">
-        <img class="art" src="images/mini-robotics.jpg" alt="Robotics Control System" width="1280" height="582" loading="lazy" decoding="async">
+        <img class="art" src="images/mini-robotics-320.webp" srcset="images/mini-robotics-320.webp 320w, images/mini-robotics-640.webp 640w, images/mini-robotics-960.webp 960w, images/mini-robotics.jpg 1280w" sizes="(max-width: 560px) 90vw, (max-width: 760px) 45vw, (max-width: 1100px) 30vw, 18vw" alt="Robotics Control System" width="1280" height="582" loading="lazy" decoding="async">
         <span class="mini-title">Robotics Control System</span>
         <span class="tags"><span>STM32</span><span>Robotics</span></span>
       </button>
 
       <button class="mini-project detail" type="button" data-title="Audio Equalizer Plugin" data-tags="JUCE,Audio DSP" data-description="A portfolio project exploring JUCE and Audio DSP.">
-        <img class="art" src="images/mini-equalizer.jpg" alt="Audio Equalizer Plugin" width="1280" height="582" loading="lazy" decoding="async">
+        <img class="art" src="images/mini-equalizer-320.webp" srcset="images/mini-equalizer-320.webp 320w, images/mini-equalizer-640.webp 640w, images/mini-equalizer-960.webp 960w, images/mini-equalizer.jpg 1280w" sizes="(max-width: 560px) 90vw, (max-width: 760px) 45vw, (max-width: 1100px) 30vw, 18vw" alt="Audio Equalizer Plugin" width="1280" height="582" loading="lazy" decoding="async">
         <span class="mini-title">Audio Equalizer Plugin</span>
         <span class="tags"><span>JUCE</span><span>Audio DSP</span></span>
       </button>
 
       <button class="mini-project detail" type="button" data-title="Sensor Data Logger" data-tags="ESP32,IoT" data-description="A portfolio project exploring ESP32 and IoT.">
-        <img class="art" src="images/mini-logger.jpg" alt="Sensor Data Logger" width="1280" height="582" loading="lazy" decoding="async">
+        <img class="art" src="images/mini-logger-320.webp" srcset="images/mini-logger-320.webp 320w, images/mini-logger-640.webp 640w, images/mini-logger-960.webp 960w, images/mini-logger.jpg 1280w" sizes="(max-width: 560px) 90vw, (max-width: 760px) 45vw, (max-width: 1100px) 30vw, 18vw" alt="Sensor Data Logger" width="1280" height="582" loading="lazy" decoding="async">
         <span class="mini-title">Sensor Data Logger</span>
         <span class="tags"><span>ESP32</span><span>IoT</span></span>
       </button>
 
       <button class="mini-project detail" type="button" data-title="AI Object Detection (Edge AI)" data-tags="Python,OpenCV" data-description="Edge AI object detection with Python and OpenCV running on embedded hardware.">
-        <img class="art" src="images/mini-linux-driver.jpg" alt="Embedded device and software interface" width="1280" height="583" loading="lazy" decoding="async">
+        <img class="art" src="images/mini-linux-driver-320.webp" srcset="images/mini-linux-driver-320.webp 320w, images/mini-linux-driver-640.webp 640w, images/mini-linux-driver-960.webp 960w, images/mini-linux-driver.jpg 1280w" sizes="(max-width: 560px) 90vw, (max-width: 760px) 45vw, (max-width: 1100px) 30vw, 18vw" alt="Embedded device and software interface" width="1280" height="583" loading="lazy" decoding="async">
         <span class="mini-title">AI Object Detection (Edge AI)</span>
         <span class="tags"><span>Python</span><span>OpenCV</span></span>
       </button>
@@ -379,7 +379,7 @@
     </div>
     <div class="experience-grid">
       <article class="experience">
-        <span class="experience-icon freelance-icon" aria-hidden="true"><img src="images/freelance-embedded-logo.png" alt="" width="536" height="536" decoding="async"></span>
+        <span class="experience-icon freelance-icon" aria-hidden="true"><img src="images/freelance-embedded-logo-160.webp" alt="" width="536" height="536" decoding="async"></span>
         <div class="experience-copy">
           <div class="experience-heading"><h3>Freelance Software Engineer</h3><span class="location">Remote</span></div>
           <p class="experience-date"><time datetime="2026-01">Jan 2026</time> – Present</p>
@@ -387,7 +387,7 @@
         </div>
       </article>
       <article class="experience">
-        <span class="experience-icon harman-icon" aria-hidden="true"><img src="images/harman-logo.png" alt="" width="612" height="357" decoding="async"></span>
+        <span class="experience-icon harman-icon" aria-hidden="true"><img src="images/harman-logo-210.webp" alt="" width="612" height="357" decoding="async"></span>
         <div class="experience-copy">
           <div class="experience-heading"><h3>Harman International</h3><span class="location">Karnal, India</span></div>
           <p class="experience-date"><time datetime="2018">2018</time> – <time datetime="2021">2021</time></p>
@@ -432,7 +432,7 @@
       <article class="certificate">
         <div class="certificate-visual nasa-visual">
           <img src="jaidevnasa.png" alt="NASA ARSET certificate awarded to Jaidev Kamboj for Fundamentals of Remote Sensing" width="805" height="505" loading="lazy" decoding="async">
-          <div class="certificate-brand nasa-mark"><img class="nasa-logo" src="images/nasa-logo.png" alt="NASA insignia" width="1008" height="864" decoding="async"></div>
+          <div class="certificate-brand nasa-mark"><img class="nasa-logo" src="images/nasa-logo-160.webp" alt="NASA insignia" width="1008" height="864" decoding="async"></div>
         </div>
         <div class="certificate-copy">
           <h3>Fundamentals of Remote Sensing</h3>
@@ -454,7 +454,7 @@
       <article class="certificate">
         <div class="certificate-visual iirs-visual">
           <img src="images/iirs-geodata-analytics-preview.png" alt="IIRS and ISRO certificate awarded to Jaidev Kamboj for AIML for Geodata Analytics" width="842" height="596" loading="lazy" decoding="async">
-          <div class="certificate-brand"><img class="iirs-logo" src="images/iirs-isro-logo.png" alt="ISRO logo" width="330" height="315" decoding="async"></div>
+          <div class="certificate-brand"><img class="iirs-logo" src="images/iirs-isro-logo-160.webp" alt="ISRO logo" width="330" height="315" decoding="async"></div>
         </div>
         <div class="certificate-copy">
           <h3>AIML for Geodata Analytics</h3>
@@ -478,7 +478,7 @@
     <div class="blog-grid" id="posts-list" tabindex="-1">
 
       <button class="post detail" type="button" data-title="Getting Started with STM32 Development" data-tags="Embedded" data-description="This article is listed in the supplied design. The full article has not been added yet.">
-        <img class="art" src="images/blog-stm32.jpg" alt="Getting Started with STM32 Development" width="1280" height="720" loading="lazy" decoding="async">
+        <img class="art" src="images/blog-stm32-320.webp" srcset="images/blog-stm32-320.webp 320w, images/blog-stm32-640.webp 640w, images/blog-stm32-960.webp 960w, images/blog-stm32.jpg 1280w" sizes="(max-width: 760px) 90vw, (max-width: 1100px) 46vw, 25vw" alt="Getting Started with STM32 Development" width="1280" height="720" loading="lazy" decoding="async">
         <span class="post-body">
           <strong>Getting Started with STM32 Development</strong>
           <span class="post-meta">
@@ -489,7 +489,7 @@
       </button>
 
       <button class="post detail" type="button" data-title="Understanding Real-Time Audio Processing with JUCE" data-tags="Audio DSP" data-description="This article is listed in the supplied design. The full article has not been added yet.">
-        <img class="art" src="images/blog-juce.jpg" alt="Real-time audio DSP interface" width="1280" height="720" loading="lazy" decoding="async">
+        <img class="art" src="images/blog-juce-320.webp" srcset="images/blog-juce-320.webp 320w, images/blog-juce-640.webp 640w, images/blog-juce-960.webp 960w, images/blog-juce.jpg 1280w" sizes="(max-width: 760px) 90vw, (max-width: 1100px) 46vw, 25vw" alt="Real-time audio DSP interface" width="1280" height="720" loading="lazy" decoding="async">
         <span class="post-body">
           <strong>Real-Time Audio Processing with JUCE</strong>
           <span class="post-meta">
@@ -500,7 +500,7 @@
       </button>
 
       <button class="post detail" type="button" data-title="UAV Flight Control System Architecture" data-tags="Robotics" data-description="This article is listed in the supplied design. The full article has not been added yet.">
-        <img class="art" src="images/blog-uav.jpg" alt="UAV flying above a mountainous landscape at dusk" width="1280" height="640" loading="lazy" decoding="async">
+        <img class="art" src="images/blog-uav-320.webp" srcset="images/blog-uav-320.webp 320w, images/blog-uav-640.webp 640w, images/blog-uav-960.webp 960w, images/blog-uav.jpg 1280w" sizes="(max-width: 760px) 90vw, (max-width: 1100px) 46vw, 25vw" alt="UAV flying above a mountainous landscape at dusk" width="1280" height="640" loading="lazy" decoding="async">
         <span class="post-body">
           <strong>UAV Flight Control System Architecture</strong>
           <span class="post-meta">
@@ -511,7 +511,7 @@
       </button>
 
       <button class="post detail" type="button" data-title="Introduction to Edge AI for Microcontrollers" data-tags="AI/ML" data-description="This article is listed in the supplied design. The full article has not been added yet.">
-        <img class="art" src="images/mini-linux-driver.jpg" alt="Embedded computer board in a software engineering workspace" width="1280" height="583" loading="lazy" decoding="async">
+        <img class="art" src="images/mini-linux-driver-320.webp" srcset="images/mini-linux-driver-320.webp 320w, images/mini-linux-driver-640.webp 640w, images/mini-linux-driver-960.webp 960w, images/mini-linux-driver.jpg 1280w" sizes="(max-width: 760px) 90vw, (max-width: 1100px) 46vw, 25vw" alt="Embedded computer board in a software engineering workspace" width="1280" height="583" loading="lazy" decoding="async">
         <span class="post-body">
           <strong>Introduction to Edge AI for Microcontrollers</strong>
           <span class="post-meta">
@@ -616,7 +616,7 @@
   </div>
   <div class="footer-showcase" aria-hidden="true">
     <picture class="footer-showcase-art">
-      <source srcset="images/footer-background.webp" type="image/webp">
+      <source srcset="images/footer-background-800.webp 800w, images/footer-background-1600.webp 1600w, images/footer-background-1983.webp 1983w" sizes="100vw" type="image/webp">
       <img src="images/footer-background.png" alt="" width="1983" height="793" loading="lazy" decoding="async">
     </picture>
   </div>
