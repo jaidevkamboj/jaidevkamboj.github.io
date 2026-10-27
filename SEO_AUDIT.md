@@ -4,9 +4,9 @@
 
 - Refined the homepage title and description to identify Jaidev Kamboj as an embedded software and R&D engineer, with Karnal, India and core specialties included in natural language. Open Graph, X/Twitter, and `ProfilePage` metadata now use the same summary.
 - Corrected `Person.sameAs` to point to the matching public GitHub profile and LinkedIn profile, and added the X profile linked from GitHub. LinkedIn and GitHub Profile identities and the portfolio URL cross-reference were checked publicly.
-- Linked the `Person` entity back to the site's `ProfilePage`; kept the one-page canonical URL and added the visible content update date to the sitemap. The Google verification file is at the site root and has already been pushed in commit `fb871f8`.
+- Linked the `Person` entity back to the site's `ProfilePage`; kept the one-page canonical URL and added the visible content update date to the sitemap. The Google verification file is at the site root (commit `fb871f8`); the SEO updates are in commit `2f21075`.
 - No visual layout or CSS changes were made in this SEO update.
-- Still unverified: the live Google URL Inspection result, Search Console property and sitemap status, manual actions/security reports, and PageSpeed field data. These require the site owner's Search Console account. A third-party fetch in this environment could not resolve the live GitHub Pages host, so this update must be published before checking the live verification URL.
+- Still unverified: the live Google URL Inspection result, Search Console property and sitemap status, manual actions/security reports, and PageSpeed field data. These require the site owner's Search Console account. The public search preview still showed the old title from a crawl last week, and this environment could not fetch the verification file or sitemap from GitHub Pages, so deployment and Google recrawl need confirmation after the publish.
 - Content opportunity: the four “Latest Insights” cards are previews, not article pages. Add original, accurate article pages with their own canonical URLs, descriptions, and sitemap entries when the underlying technical details are ready; the current hash sections are not separate indexable pages.
 
 Audit date: 2026-10-27
